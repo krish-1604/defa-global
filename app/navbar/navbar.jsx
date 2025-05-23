@@ -22,13 +22,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 py-1 shadow-md"
+      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 py-3 shadow-md"
         style={{background: 'linear-gradient(90deg, #001C34 0%, #003664 50%, #001C34 100%)'}}>
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/images/logo.png" alt="logo" width={50} height={50} />
+            <Image src="/images/logo.png" alt="logo" width={52} height={52} />
           </Link>
-          <span className="text-[160%] font-vertrio font-bold text-golden mt-1">DeFa Global</span>
+          <span className="text-[165%] font-vertrio font-bold text-golden mt-1">DeFa Global</span>
         </div>
 
         <div className="hidden md:flex items-center space-x-6">
@@ -37,13 +37,13 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                className="bg-golden text-darkblue font-hk px-4 py-0.5 rounded hover:opacity-90 text-[120%] cursor-pointer"
+                className="bg-golden text-darkblue font-hk px-4 py-0.5 rounded hover:opacity-90 text-[130%] cursor-pointer"
               >
                 {link.label}
               </Link>
             ) : (
               <Link key={link.path} href={link.path}>
-                <span className={`${isActive(link.path) ? 'text-golden' : 'text-darkblue'} font-hk text-[120%] cursor-pointer`}>
+                <span className={`${isActive(link.path) ? 'text-golden' : 'text-white'} font-hk text-[130%] cursor-pointer`}>
                   {link.label}
                 </span>
               </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
         >
-          <svg className="w-8 h-8 text-darkblue" fill="none" stroke="currentColor" strokeWidth="2"
+          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2"
             viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -65,10 +65,11 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`fixed top-0 right-0 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out
+        className={`fixed top-0 right-0 h-full shadow-lg transform transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : 'translate-x-full'}
           w-3/5 max-w-xs z-50
         `}
+        style={{background: 'linear-gradient(0deg, #001C34 0%, #003664 50%, #001C34 100%)'}}
       >
         <div className="flex justify-between items-center px-6 py-4 border-b">
           <div className="flex items-center space-x-2">
@@ -76,7 +77,7 @@ export default function Navbar() {
             <span className="text-xl font-bold text-golden">DeFa Global</span>
           </div>
           <button
-            className="text-darkblue focus:outline-none"
+            className="text-white focus:outline-none"
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
           >
@@ -92,7 +93,7 @@ export default function Navbar() {
             <Link key={link.path} href={link.path}>
               <span
                 onClick={() => setIsOpen(false)}
-                className={`${isActive(link.path) ? 'text-golden' : 'text-darkblue'} font-semibold cursor-pointer`}
+                className={`${isActive(link.path) ? 'text-golden' : 'text-white'} font-semibold cursor-pointer`}
               >
                 {link.label}
               </span>
