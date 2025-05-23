@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 py-1 shadow-md"
-        style={{background: 'linear-gradient(90deg, #EEFEFF 0%, #E2F8FF 25%, #D5F5FF 50%, #E2F8FF 75%, #EEFEFF 100%)'}}>
+        style={{background: 'linear-gradient(90deg, #001C34 0%, #003664 50%, #001C34 100%)'}}>
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/images/logo.png" alt="logo" width={50} height={50} />
