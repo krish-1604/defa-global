@@ -6,6 +6,8 @@ import Aboutus from "./aboutus"
 import Vision_Mission from "./vision_and_mission"
 import GlobalPresence from "./global_presence"
 import GoldenCircle from "../components/golden_circle"
+import ProductsPage from "./productspage"
+import ServicesPage from "./offer"
 
 export default function Home() {
   const router = useRouter()
@@ -65,6 +67,10 @@ export default function Home() {
 
       {/* Global Presence Section */}
       <GlobalPresence/>
+
+      <ProductsPage/>
+
+      <ServicesPage/>
     </div>
   )
 }
