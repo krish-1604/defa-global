@@ -1,6 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react'
+import Image from 'next/image'
+import {useRouter} from 'next/navigation'
+import Button from '../components/button'
 
 const products = [
   {
@@ -32,12 +33,12 @@ const products = [
 ];
 
 export default function ProductsPage() {
+  const router = useRouter();
+    const handleClick =()=>{
+      router.push('/products');
+  }
   return (
     <main className="relative min-h-screen bg-[#e2f8ff] overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute -top-40 -right-40 size-80 bg-gradient-to-br from-blue-200/20 to-indigo-300/20 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -left-32 size-64 bg-gradient-to-tr from-amber-200/20 to-yellow-300/20 rounded-full blur-3xl" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="pt-16 pb-20 text-center">
@@ -50,7 +51,7 @@ export default function ProductsPage() {
         </header>
 
         {/* Products Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-20">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12">
           {products.map((product, index) => (
             <div
               key={product.id}
@@ -86,28 +87,8 @@ export default function ProductsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="pb-20 text-center">
-          <Link
-            href="/products"
-            className="inline-flex items-center gap-3 rounded-md bg-darkblue 
-              px-8 py-2 text-lg font-semibold text-golden shadow-lg shadow-slate-900/25 
-              transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-slate-900/20"
-          >
-            View All Products
-            <svg
-              className="size-5 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
+        <section className="flex justify-center">
+          <Button onClick={handleClick}>View all Products</Button>
         </section>
       </div>
     </main>

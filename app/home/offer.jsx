@@ -1,51 +1,48 @@
-import Link from 'next/link';
-
-const services = [
-  "Installation of Industrial Machine",
-  "Industrial Process Control Systems",
-  "Communications Equipment Setup",
-  "Mainframe & Computer Systems",
-  "Irradiation & Electromedical Equipment",
-  "Bowling Alley Equipment Installation",
-  "Millwright Services",
-  "Machine Rigging",
-  "Machinery Dismantling",
-];
-
-export default function ServicesPage() {
+import GoldenBorderButton from "../components/golden_border_button"
+import Button from "../components/button"
+import { useRouter } from "next/navigation"
+export default function Offer() {
+  const services = [
+    "Installation of Industrial Machine",
+    "Industrial Process Control Systems",
+    "Communications Equipment Setup",
+    "Mainframe & Computer Systems",
+    "Irradiation & Electromedical Equipment",
+    "Bowling Alley Equipment Installation",
+    "Millwright Services",
+    "Machine Rigging",
+    "Machinery Dismantling",
+  ]
+  const router = useRouter();
+  const handleClick=()=>{
+    router.push('/services');
+  }
   return (
-    <main className="min-h-screen bg-[#eefeff] flex flex-col items-center py-16 px-4">
-      {/* Header */}
-      <h2 className="text-4xl md:text-5xl font-bold text-darkblue text-center mb-2">
-        What <span className="text-darkblue">We Offer</span>
-      </h2>
-      {/* Gold underline */}
-      <div className="w-32 h-1 bg-[#e2c15a] rounded-full mx-auto mb-6" />
-      {/* Description */}
-      <p className="text-darkblue text-lg md:text-xl text-center max-w-3xl mb-12">
-        Our wide-ranging operations are structured to provide comprehensive solutions
-        for your industrial needs.
-      </p>
-      {/* Services Grid */}
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        {services.map((service, idx) => (
-          <div
-            key={idx}
-            className="border-4 border-[#e2c15a] rounded-2xl px-6 py-8 flex items-center justify-center text-center text-[#174072] font-semibold text-lg md:text-xl bg-[#eefeff]"
-          >
-            {service}
-          </div>
-        ))}
+    <div className="bg-[#eefeff] py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-darkblue mb-2">What We Offer</h2>
+          <div className="w-16 h-1 bg-golden mx-auto mb-6"></div>
+          <p className="text-darkblue max-w-3xl mx-auto text-lg">
+            Our wide-ranging operations are structured to provide comprehensive solutions for your industrial needs.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {services.map((service, index) => (
+            <GoldenBorderButton key={index} className="h-24 text-sm md:text-base">
+              {service}
+            </GoldenBorderButton>
+          ))}
+        </div>
+
+        {/* View All Services Button */}
+        <section className="flex justify-center">
+          <Button onClick={handleClick}>View all Services</Button>
+        </section>
       </div>
-      {/* View All Services Button */}
-      <Link
-        href="/services"
-        className="inline-flex items-center gap-3 rounded-md bg-darkblue 
-              px-8 py-2 text-lg font-semibold text-golden shadow-lg shadow-slate-900/25 
-              transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-slate-900/20"
-      >
-        View All Services &rarr;
-      </Link>
-    </main>
-  );
+    </div>
+  )
 }
