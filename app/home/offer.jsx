@@ -18,7 +18,7 @@ export default function Offer() {
     router.push('/services');
   }
   return (
-    <div className="bg-[#eefeff] py-16 px-4">
+    <div className="h-screen overflowe-hidden bg-[#eefeff] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
