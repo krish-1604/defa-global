@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <StickyEnquire onContactClick={() => setShowContactModal(true)}/>
           {children}
           <Modal isOpen={showContactModal} onClose={() => setShowContactModal(false)}>
-            <Contact />
+            <Contact onClose={() => setShowContactModal(false)} />
           </Modal>
         </div>
       </body>

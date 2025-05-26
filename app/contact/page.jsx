@@ -1,8 +1,7 @@
 'use client'
 import { useState } from 'react';
 
-export default function Contact() {
-  const [isOpen, setIsOpen] = useState(true);
+export default function Contact({onClose}) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -21,29 +20,21 @@ export default function Contact() {
 
   const handleSubmit = () => {
     console.log('Form submitted:', formData);
-    // Handle form submission here
-    setIsOpen(false);
+    // Handle form submission logic here
+    onClose(); // Close the modal via parent
   };
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
-  if (!isOpen) {
-    return null;
-  }
 
   return (
     <div key="contact-modal" className="fixed inset-0 z-50 flex items-center justify-center">
       <div 
         className="absolute inset-0 bg-black bg-opacity-50"
-        onClick={handleClose}
+        onClick={onClose}
       ></div>
       
       <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-2 sm:mx-4 bg-[#C1F0FF] rounded-2xl sm:rounded-3xl shadow-2xl max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
-          onClick={handleClose}
+          onClick={onClose}
           className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 text-darkblue hover:darkblue transition-colors z-10"
         >
           <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
