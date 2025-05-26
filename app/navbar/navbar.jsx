@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 py-3 shadow-md"
+      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 py-3 shadow-md h-16 sm:h-18 md:h-20"
         style={{background: 'linear-gradient(90deg, #001C34 0%, #003664 50%, #001C34 100%)'}}>
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
@@ -51,63 +51,78 @@ export default function Navbar() {
           )}
         </div>
 
-
-        <button
-          className="md:hidden flex items-center focus:outline-none"
-          onClick={() => setIsOpen(true)}
-          aria-label="Open menu"
-        >
-          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2"
-            viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </nav>
-
-      <div
-        className={`fixed top-0 right-0 h-full shadow-lg transform transition-transform duration-300 ease-in-out
-          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-          w-3/5 max-w-xs z-50
-        `}
-        style={{background: 'linear-gradient(0deg, #001C34 0%, #003664 50%, #001C34 100%)'}}
-      >
-        <div className="flex justify-between items-center px-6 py-4 border-b">
-          <div className="flex items-center space-x-2">
-            <Image src="/images/logo.png" alt="logo" width={40} height={40} />
-            <span className="text-xl font-bold text-golden">DeFa Global</span>
-          </div>
+        {!isOpen ? (
+          <button
+            className="md:hidden flex items-center focus:outline-none"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
+          >
+            <svg className="w-8 h-8 text-golden" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        ) : (
           <button
             className="text-white focus:outline-none"
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2"
-              viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-        </div>
+        )}
 
-        <nav className="flex flex-col space-y-6 mt-8 px-6">
-          {navLinks.map(link => (
-            <Link key={link.path} href={link.path}>
-              <span
-                onClick={() => setIsOpen(false)}
-                className={`${isActive(link.path) ? 'text-golden' : 'text-white'} font-semibold cursor-pointer`}
-              >
-                {link.label}
-              </span>
-            </Link>
+      </nav>
+
+      {/* Mobile Menu Dropdown */}
+      <div
+        className={`fixed top-16 sm:top-18 md:top-20 left-0 w-full transform transition-transform duration-300 ease-in-out z-40 shadow-lg
+          ${isOpen ? 'translate-y-0' : '-translate-y-full'}
+          max-h-[45vh] sm:max-h-[40vh] md:max-h-[35vh] min-h-fit overflow-y-auto
+        `}
+        style={{background: 'linear-gradient(180deg, #001C34 0%, #003664 50%, #001C34 100%)'}}
+      >
+        
+        {/* Navigation Links */}
+        <nav className="flex flex-col px-6 py-2">
+          {navLinks.map((link, index) => (
+            <div key={link.path} className="border-b border-white/10 last:border-b-0">
+              {link.label === 'Contact' ? (
+                <div className="py-3">
+                  <Link href={link.path}>
+                    <span
+                      onClick={() => setIsOpen(false)}
+                      className="bg-golden text-darkblue font-semibold px-3 py-1.5 rounded inline-block cursor-pointer hover:opacity-90 text-sm"
+                    >
+                      {link.label}
+                    </span>
+                  </Link>
+                </div>
+              ) : (
+                <Link href={link.path}>
+                  <span
+                    onClick={() => setIsOpen(false)}
+                    className={`block py-3 text-lg font-semibold cursor-pointer transition-colors
+                      ${isActive(link.path) ? 'text-golden' : 'text-white hover:text-golden'}
+                    `}
+                  >
+                    {link.label}
+                  </span>
+                </Link>
+              )}
+            </div>
           ))}
         </nav>
       </div>
 
+      {/* Background overlay when menu is open */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-30 z-40"
+          className="fixed inset-0 bg-black bg-opacity-30 z-30"
           aria-hidden="true"
-        ></div>
+        />
       )}
     </>
   )

@@ -1,11 +1,13 @@
 "use client"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import {ArrowRight } from "lucide-react"
 import Aboutus from "./aboutus"
 import Vision_Mission from "./vision_and_mission"
 import GlobalPresence from "./global_presence"
 import GoldenCircle from "../components/golden_circle"
+import ProductsPage from "./productspage"
+import ServicesPage from "./offer"
+import Button from "../components/button"
 
 export default function Home() {
   const router = useRouter()
@@ -47,13 +49,7 @@ export default function Home() {
             </p>
           </div>
 
-          <button
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-darkblue rounded-lg w-full sm:w-[60%] max-w-[212px] whitespace-nowrap transition-transform hover:scale-105"
-            onClick={handleClick}
-          >
-            <span className="text-sm sm:text-base md:text-lg text-golden font-hk">About Us</span>
-            <ArrowRight className="text-golden"/>
-          </button>
+          <Button onClick={handleClick}>About Us</Button>
         </div>
       </section>
 
@@ -65,6 +61,10 @@ export default function Home() {
 
       {/* Global Presence Section */}
       <GlobalPresence/>
+
+      <ProductsPage/>
+
+      <ServicesPage/>
     </div>
   )
 }

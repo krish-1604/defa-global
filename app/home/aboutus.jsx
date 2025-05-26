@@ -1,4 +1,5 @@
 import { useRouter } from "next/navigation"
+import Button from "../components/button";
 export default function Aboutus(){
     const router = useRouter()
     
@@ -28,12 +29,7 @@ export default function Aboutus(){
                 International Oud SPC—we deliver regionally integrated solutions that reflect both scale and
                 specialization.
               </p>
-              <button
-                className="bg-darkblue text-white px-4 sm:px-6 py-2 sm:py-3 rounded flex items-center transition-all hover:bg-opacity-90 hover:shadow-md text-sm sm:text-base md:text-lg"
-                onClick={handleClick}
-              >
-                Read More <span className="ml-2">→</span>
-              </button>
+              <Button onClick={handleClick}/>
             </div>
             <div className="lg:w-1/2 order-1 lg:order-2">
               <div className="bg-golden w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] rounded-lg shadow-lg transform hover:scale-[1.02] transition-transform duration-300"></div>
