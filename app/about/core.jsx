@@ -6,27 +6,27 @@ const values = [
   {
     title: "Integrity",
     description: "We act with honesty and honor our commitments",
-    image: "/images/integrity.png", // Place the correct images in /public/images/
+    image: "/images/about/integrity.png",
   },
   {
     title: "Quality",
     description: "We strive for excellence in every product and service",
-    image: "/images/quality.jpg",
+    image: "/images/about/quality.jpg",
   },
   {
     title: "Customer Focus",
     description: "Our clients’ success is our top priority",
-    image: "/images/customer-focus.jpg",
+    image: "/images/about/customer-focus.jpg",
   },
   {
     title: "Adaptability",
     description: "We evolve with industry trends and client needs",
-    image: "/images/adaptability.jpg",
+    image: "/images/about/adaptability.jpg",
   },
   {
     title: "Partnership",
     description: "We believe in building lasting business relationships",
-    image: "/images/partnership.jpg",
+    image: "/images/about/partnership.jpg",
   },
 ];
 

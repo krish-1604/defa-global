@@ -159,7 +159,6 @@ export default function Services() {
         </div>
       </div>
       <SolutionsPage />
-      <Footer />
     </section>
   )
 }

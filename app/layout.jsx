@@ -6,6 +6,7 @@ import Navbar from './navbar/navbar'
 import './globals.css'
 import Modal from './components/Modal'
 import Contact from './contact/page'
+import Footer from './home/footer'
 
 export default function RootLayout({ children }) {
   const [showContactModal, setShowContactModal] = useState(false)
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <Modal isOpen={showContactModal} onClose={() => setShowContactModal(false)}>
             <Contact onClose={() => setShowContactModal(false)} />
           </Modal>
+          <Footer/>
         </div>
       </body>
     </html>

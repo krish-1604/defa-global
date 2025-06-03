@@ -3,6 +3,8 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import DeFaGlobalBrochure from "./building"
 import Footer from "@/app/home/footer"
+import GoldenCircle from "@/app/components/golden_circle"
+import Button from "@/app/components/button"
 
 
 
@@ -17,11 +19,12 @@ export default function towercranespage() {
         
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <Image src="/images/landing.png" alt="Industrial facility at sunset" fill className="object-cover" priority />
+          <Image src="/images/products/tower-crane.jpg" alt="Industrial facility at sunset" fill className="object-cover" priority />
         </div>
 
+        {/* Golden Circle */}
+        <GoldenCircle/>
         
-
         {/* Content */}
         <div className="relative z-20 px-4 sm:px-6 md:px-8 lg:px-[3%] py-16 md:py-20 lg:py-[12.5%] w-full md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%]">
           <div className="pb-8 md:pb-12 lg:pb-16">
@@ -39,12 +42,11 @@ export default function towercranespage() {
             </p>
           </div>
 
-          
+        <Button onClick={{}}>Explore</Button>
         </div>
       </section>
 
       <DeFaGlobalBrochure/>
-      <Footer/>
     </div>
   )
 }

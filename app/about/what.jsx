@@ -3,25 +3,25 @@ import Image from 'next/image';
 const services = [
   {
     title: 'Industrial Parts & Mechanical Equipment',
-    image: '/images/industrial.jpg',
+    image: '/images/about/industrial_parts.jpg',
     description:
       'Supplying precision-engineered parts including valves, gaskets, motors, seals, and air solutions for industrial applications.',
   },
   {
     title: 'Construction Equipment & Building Materials',
-    image: '/images/construction.jpg',
+    image: '/images/about/construction.jpg',
     description:
       'Providing top-tier building materials along with tower cranes, hoists, scaffolding, and site infrastructure equipment.',
   },
   {
     title: 'Motor & Pump Services',
-    image: '/images/motor.jpg',
+    image: '/images/about/motor.jpg',
     description:
       'Offering specialized repairing, rewinding, and maintenance services for electric motors, pumps, and rotating machinery.',
   },
   {
     title: 'International Trading',
-    image: '/images/trading.jpg',
+    image: '/images/about/trading.jpg',
     description:
       'Exporting high-demand commodities such as fertilizers, coir products, and limestone, backed by reliable logistics and compliance.',
   },
@@ -29,7 +29,7 @@ const services = [
 
 export default function WhatWeDo() {
   return (
-    <main className="min-h-screen bg-[#eaf7f6] py-40 px-4">
+    <main className="min-h-screen bg-[#E2F8FF] py-40 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#23406a] text-center mb-2">

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex-1 min-w-[250px] flex flex-col gap-6">
           {/* Logo above "DeFa Global" */}
           <div className="flex flex-col items-start">
-            <Image src="/logo.svg" alt="DeFa Global Logo" width={80} height={80} />
+            <Image src="/images/logo.png" alt="DeFa Global Logo" width={80} height={80} />
             <span className="text-4xl font-bold text-[#e2c15a] mt-2">DeFa Global</span>
           </div>
           <div className="flex flex-col gap-4 text-xl">

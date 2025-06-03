@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
-    <div className="min-h-screen bg-[#eafdff] py-44  px-4">
+    <div className="min-h-screen bg-[#EEFEFF] py-44  px-4">
       {/* Centered Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[#15508b] mb-3">
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
         <div className="flex-1 flex justify-center items-center">
           <div className="w-full max-w-md h-80 md:h-96 relative rounded-3xl overflow-hidden shadow-lg">
             <Image
-              src="/images/Why-Choose-Us.jpg"
+              src="/images/about/why.jpg"
               alt="Logistics and global connectivity"
               fill
               className="object-cover"

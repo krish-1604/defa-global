@@ -9,7 +9,7 @@ import Footer from '../home/footer';
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#004884]">
+    <div className="bg-darkblue">
     <section className="min-h-screen  flex items-center justify-center px-4 py-16">
       <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left: Text Content */}
@@ -25,16 +25,16 @@ export default function AboutPage() {
         </div>
         {/* Right: Image */}
         <div className="flex-1 flex justify-center lg:justify-end">
-          <div className="w-[420px] h-[420px] rounded-full overflow-hidden shadow-xl border-4 border-[#004884] bg-white/10">
+          {/* <div className="w-[420px] h-[420px] rounded-full overflow-hidden shadow-xl border-4 border-[#004884] bg-white/10">
             <Image
-              src="" // or use the provided URL
+              src=""
               alt="DeFa Global Team"
               width={840}
               height={840}
               className="object-cover w-full h-full"
               priority
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
@@ -43,7 +43,6 @@ export default function AboutPage() {
     <Vision_Mission/>
     <CoreValuesPage/>
     <WhyChooseUs/>
-    <Footer/>
     </div>
   );
 }

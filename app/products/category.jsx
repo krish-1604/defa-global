@@ -6,37 +6,37 @@ const products = [
   {
     title: "Tower Cranes & Hoists",
     description: "We supply durable, high-capacity tower cranes and hoists for large-scale building projects.",
-    image: "/images/tower-crane.jpg",
+    image: "/images/products/tower-crane.jpg",
     link: "/products/tower", 
   },
   {
     title: "Motor-pumps",
     description: "Our team specializes in the repair, rewinding, and maintenance of electric motors and industrial pumps.",
-    image: "/images/motor-pump.jpg",
+    image: "/images/products/motor-pump.jpg",
     link: "/motor-pumps",
   },
   {
     title: "Industrial Parts",
     description: "We supply a wide range of mechanical and industrial parts, including valves, gaskets, flanges, and fittings.",
-    image: "/images/industrial-parts.jpg",
+    image: "/images/products/industrial-parts.jpg",
     link: "/industrial-parts",
   },
   {
     title: "Construction Materials",
     description: "Supply of sand, gravel, cement, and general materials for building projects.",
-    image: "/images/construction-materials.jpg",
+    image: "/images/products/construction-materials.jpg",
     link: "/construction-materials",
   },
   {
     title: "Fittings & Fixtures",
     description: "Wholesale of building installation accessories for plumbing, electrical, and more.",
-    image: "/images/fittings-fixtures.jpg",
+    image: "/images/products/fittings-fixtures.jpg",
     link: "/fittings-fixtures",
   },
   {
     title: "Hand Tools",
     description: "Distribution of manual tools like hammers, saws, screwdrivers for construction and maintenance.",
-    image: "/images/hand-tools.jpg",
+    image: "/images/products/hand-tools.jpg",
     link: "/hand-tools",
   },
 ];
