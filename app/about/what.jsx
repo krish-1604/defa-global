@@ -1,29 +1,29 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const services = [
   {
-    title: 'Industrial Parts & Mechanical Equipment',
-    image: '/images/about/industrial_parts.jpg',
+    title: "Industrial Parts & Mechanical Equipment",
+    image: "/images/about/industrial-parts.png",
     description:
-      'Supplying precision-engineered parts including valves, gaskets, motors, seals, and air solutions for industrial applications.',
+      "Supplying precision-engineered parts including valves, gaskets, motors, seals, and air solutions for industrial applications.",
   },
   {
-    title: 'Construction Equipment & Building Materials',
-    image: '/images/about/construction.jpg',
+    title: "Construction Equipment & Building Materials",
+    image: "/images/about/construction.jpg",
     description:
-      'Providing top-tier building materials along with tower cranes, hoists, scaffolding, and site infrastructure equipment.',
+      "Providing top-tier building materials along with tower cranes, hoists, scaffolding, and site infrastructure equipment.",
   },
   {
-    title: 'Motor & Pump Services',
-    image: '/images/about/motor.jpg',
+    title: "Motor & Pump Services",
+    image: "/images/about/motor.jpg",
     description:
-      'Offering specialized repairing, rewinding, and maintenance services for electric motors, pumps, and rotating machinery.',
+      "Offering specialized repairing, rewinding, and maintenance services for electric motors, pumps, and rotating machinery.",
   },
   {
-    title: 'International Trading',
-    image: '/images/about/trading.jpg',
+    title: "International Trading",
+    image: "/images/about/trading.jpg",
     description:
-      'Exporting high-demand commodities such as fertilizers, coir products, and limestone, backed by reliable logistics and compliance.',
+      "Exporting high-demand commodities such as fertilizers, coir products, and limestone, backed by reliable logistics and compliance.",
   },
 ];
 
@@ -74,4 +74,3 @@ export default function WhatWeDo() {
     </main>
   );
 }
-
