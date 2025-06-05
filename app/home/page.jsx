@@ -7,7 +7,11 @@ import GlobalPresence from "./global_presence"
 import GoldenCircle from "../components/golden_circle"
 import ProductsPage from "./productspage"
 import ServicesPage from "./offer"
-import Button from "../components/button"
+
+
+
+import Footer from "./footer"
+
 
 export default function Home() {
   const router = useRouter()
@@ -49,7 +53,7 @@ export default function Home() {
             </p>
           </div>
 
-          <Button onClick={handleClick}>About Us</Button>
+          
         </div>
       </section>
 
@@ -65,6 +69,7 @@ export default function Home() {
       <ProductsPage/>
 
       <ServicesPage/>
+      
     </div>
   )
 }

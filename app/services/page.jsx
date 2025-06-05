@@ -1,6 +1,7 @@
-"use client"
 
 import Image from "next/image"
+import SolutionsPage from "./solution "
+import Footer from "../home/footer"
 
 const servicesData = [
   {
@@ -31,6 +32,65 @@ const servicesData = [
       "Custom Mechanical Solutions",
       "Equipment Alignment",
       "Preventive Maintenance",
+    ],
+  },
+  {
+    id: "engineering-design",
+    title: "Engineering Design & Consultancy",
+    description:
+      "Engineering and project consultancy for mechanical, electrical, and civil systems. Services include design, safety planning, equipment selection, and project management.",
+    imageUrl: "/images/service-consultancy.jpg",
+    imageAlt: "Engineers reviewing blueprints",
+    keyServices: [
+      "Mechanical Engineering",
+      "Civil Engineering",
+      "Electrical Engineering",
+      "Systems Engineering",
+      "Project Management",
+    ],
+  },
+  {
+    id: "building-materials",
+    title: "Building Materials & Machinery Supply",
+    description:
+      "We provide a reliable supply of essential building materials and construction machinery, including tower cranes, equipment rentals, and site support tools. All products are sourced from trusted manufacturers to ensure safety, durability, and compliance with industry standards.",
+    imageUrl: "/images/service-building.jpg",
+    imageAlt: "Tower cranes at construction site",
+    keyServices: [
+      "Construction Machinery Supply",
+      "Building Materials Procurement",
+      "Equipment Rental",
+      "Site Support Tools",
+    ],
+  },
+  {
+    id: "scaffolding-formwork",
+    title: "Scaffolding & Formwork Supply",
+    description:
+      "We supply scaffolding and formwork systems suitable for construction and industrial applications. Available for sale or rental, our systems are designed to meet safety and performance standards.",
+    imageUrl: "/images/service-scaffolding.jpg",
+    imageAlt: "Scaffolding and formwork at construction site",
+    keyServices: [
+      "Scaffolding Systems",
+      "Formwork Solutions",
+      "Installation Services",
+      "Safety Inspections",
+      "Custom Configurations",
+    ],
+  },
+  {
+    id: "general-trading",
+    title: "General & Online Trading",
+    description:
+      "Licensed for global general trading and e-commerce, supporting international supply chains through flexible procurement and logistics channels.",
+    imageUrl: "/images/service-trading.jpg",
+    imageAlt: "Shipping containers at port",
+    keyServices: [
+      "International Procurement",
+      "Supply Chain Management",
+      "Logistics Solutions",
+      "Import/Export Services",
+      "E-commerce Solutions",
     ],
   },
 ]
@@ -98,6 +158,7 @@ export default function Services() {
           </div>
         </div>
       </div>
+      <SolutionsPage />
     </section>
   )
 }
