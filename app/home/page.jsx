@@ -18,7 +18,7 @@ export default function Home() {
     <div className="bg-[#EEFEFF]">
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 ">
           <Image
             src="/images/landing.png"
             alt="Industrial facility at sunset"
@@ -26,6 +26,8 @@ export default function Home() {
             className="object-cover"
             priority
           />
+          {/* Mobile-only dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40 md:bg-transparent"></div>
         </div>
 
         {/* Golden Circle */}
