@@ -8,7 +8,7 @@ const servicesData = [
     title: "Industrial Machinery & Equipment",
     description:
       "We offer installation, dismantling, rigging, and servicing of industrial machinery. Our team ensures reliable and efficient handling of equipment throughout its lifecycle.",
-    imageUrl: "/placeholder.svg?height=400&width=600",
+    imageUrl: "/images/services/industrial.png",
     imageAlt: "Technician working on industrial machinery",
     keyServices: [
       "Installation of Industrial Machinery",
@@ -23,7 +23,7 @@ const servicesData = [
     title: "Mechanical & Engineering Services",
     description:
       "Comprehensive mechanical support including installation, millwright services, process piping, and custom solutions. We also specialize in carbon steel seamless pipes, fittings, flanges, valves, and alloy materials for demanding industries.",
-    imageUrl: "/placeholder.svg?height=400&width=600",
+    imageUrl: "/images/services/mechanical.png",
     imageAlt: "Engineer working on pipes",
     keyServices: [
       "Millwright Services",
@@ -38,7 +38,7 @@ const servicesData = [
     title: "Engineering Design & Consultancy",
     description:
       "Engineering and project consultancy for mechanical, electrical, and civil systems. Services include design, safety planning, equipment selection, and project management.",
-    imageUrl: "/images/service-consultancy.jpg",
+    imageUrl: "/images/services/engineering.png",
     imageAlt: "Engineers reviewing blueprints",
     keyServices: [
       "Mechanical Engineering",
@@ -53,7 +53,7 @@ const servicesData = [
     title: "Building Materials & Machinery Supply",
     description:
       "We provide a reliable supply of essential building materials and construction machinery, including tower cranes, equipment rentals, and site support tools. All products are sourced from trusted manufacturers to ensure safety, durability, and compliance with industry standards.",
-    imageUrl: "/images/service-building.jpg",
+    imageUrl: "/images/services/building.png",
     imageAlt: "Tower cranes at construction site",
     keyServices: [
       "Construction Machinery Supply",
@@ -67,7 +67,7 @@ const servicesData = [
     title: "Scaffolding & Formwork Supply",
     description:
       "We supply scaffolding and formwork systems suitable for construction and industrial applications. Available for sale or rental, our systems are designed to meet safety and performance standards.",
-    imageUrl: "/images/service-scaffolding.jpg",
+    imageUrl: "/images/services/scaffolding.png",
     imageAlt: "Scaffolding and formwork at construction site",
     keyServices: [
       "Scaffolding Systems",
@@ -82,7 +82,7 @@ const servicesData = [
     title: "General & Online Trading",
     description:
       "Licensed for global general trading and e-commerce, supporting international supply chains through flexible procurement and logistics channels.",
-    imageUrl: "/images/service-trading.jpg",
+    imageUrl: "/images/services/general.png",
     imageAlt: "Shipping containers at port",
     keyServices: [
       "International Procurement",
@@ -146,20 +146,14 @@ export default function Services() {
                   <ul className="list-none space-y-2">
                     {service.keyServices.map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-golden mr-2 mt-1">
-                          <svg
-                            className="w-5 h-5 inline"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </span>
+                        <div className="w-5 h-5 mr-2 mt-1 relative flex-shrink-0">
+                          <Image
+                            src="/images/tick.svg"
+                            alt="Checkmark"
+                            width={20}
+                            height={20}
+                          />
+                        </div>
                         <span className="text-darkblue font-hk text-sm md:text-base">
                           {item}
                         </span>
