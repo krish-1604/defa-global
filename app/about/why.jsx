@@ -19,31 +19,67 @@ export default function WhyChooseUs() {
         <div className="flex-1">
           <ul className="space-y-6">
             <li className="flex items-start gap-3">
-              <span className="mt-1 text-[#e2c36b] text-xl">✔️</span>
+              <div className="mt-1 w-6 h-6 relative flex-shrink-0">
+                <Image
+                  src="/images/tick.svg"
+                  alt="Checkmark"
+                  width={24}
+                  height={24}
+                />
+              </div>
               <span className="text-[#15508b] text-xl">
                 Extensive experience in industrial procurement and trading
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="mt-1 text-[#e2c36b] text-xl">✔️</span>
+              <div className="mt-1 w-6 h-6 relative flex-shrink-0">
+                <Image
+                  src="/images/tick.svg"
+                  alt="Checkmark"
+                  width={24}
+                  height={24}
+                />
+              </div>
               <span className="text-[#15508b] text-xl">
                 Strong regional and international supplier networks
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="mt-1 text-[#e2c36b] text-xl">✔️</span>
+              <div className="mt-1 w-6 h-6 relative flex-shrink-0">
+                <Image
+                  src="/images/tick.svg"
+                  alt="Checkmark"
+                  width={24}
+                  height={24}
+                />
+              </div>
               <span className="text-[#15508b] text-xl">
                 Technical capabilities in equipment maintenance and support
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="mt-1 text-[#e2c36b] text-xl">✔️</span>
+              <div className="mt-1 w-6 h-6 relative flex-shrink-0">
+                <Image
+                  src="/images/tick.svg"
+                  alt="Checkmark"
+                  width={24}
+                  height={24}
+                />
+              </div>
               <span className="text-[#15508b] text-xl">
-                Commitment to timely delivery, compliance, and customer satisfaction
+                Commitment to timely delivery, compliance, and customer
+                satisfaction
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="mt-1 text-[#e2c36b] text-xl">✔️</span>
+              <div className="mt-1 w-6 h-6 relative flex-shrink-0">
+                <Image
+                  src="/images/tick.svg"
+                  alt="Checkmark"
+                  width={24}
+                  height={24}
+                />
+              </div>
               <span className="text-[#15508b] text-xl">
                 Strategic UAE location with global logistics connectivity
               </span>
