@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <div className="bg-[#EEFEFF]">
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 z-0 ">
           <Image
             src="/images/landing.png"
@@ -30,10 +29,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40 md:bg-transparent"></div>
         </div>
 
-        {/* Golden Circle */}
         <GoldenCircle />
 
-        {/* Content */}
         <div className="relative z-20 px-4 sm:px-6 md:px-8 lg:px-[3%] py-16 md:py-20 lg:py-[12.5%] w-full md:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%]">
           <div className="pb-8 md:pb-12 lg:pb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-snug md:leading-[1.2] font-black text-darkblue font-hk pb-2 md:pb-4">

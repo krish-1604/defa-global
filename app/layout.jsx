@@ -6,7 +6,7 @@ import Navbar from "./navbar/navbar";
 import "./globals.css";
 import Modal from "./components/Modal";
 import Contact from "./contact/page";
-import Footer from "./home/footer";
+import Footer from "./components/footer";
 import WhatsappButton from "./components/whatsappbutton";
 
 export default function RootLayout({ children }) {
