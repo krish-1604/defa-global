@@ -32,11 +32,11 @@ export default function WhatWeDo() {
     <main className="min-h-screen bg-[#E2F8FF] py-40 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#23406a] text-center mb-2">
-          What <span className="text-[#23406a]">We Do</span>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-darkblue text-center mb-2">
+          What <span className="text-darkblue">We Do</span>
         </h1>
         <div className="h-1 w-32 bg-golden rounded-full mx-auto mb-8" />
-        <p className="text-[#23406a] text-lg md:text-xl text-center mb-12">
+        <p className="text-darkblue text-lg md:text-xl text-center mb-12">
           Our wide-ranging operations are structured into four main verticals:
         </p>
       </div>
@@ -60,10 +60,10 @@ export default function WhatWeDo() {
                 />
               </div>
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-[#ceb073] mb-2 text-center">
+                <h3 className="text-lg font-semibold text-golden mb-2 text-center">
                   {service.title}
                 </h3>
-                <p className="text-[#23406a] text-base text-center">
+                <p className="text-darkblue text-base text-center">
                   {service.description}
                 </p>
               </div>

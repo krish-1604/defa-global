@@ -31,8 +31,10 @@ export default function Aboutus(){
               </p>
               <Button onClick={handleClick}/>
             </div>
-            <div className="lg:w-1/2 order-1 lg:order-2">
-              <div className="bg-golden w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] rounded-lg shadow-lg transform hover:scale-[1.02] transition-transform duration-300"></div>
+            <div className="w-full lg:w-1/2 order-1 lg:order-2">
+              <div className="bg-golden w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] rounded-lg shadow-lg transform hover:scale-[1.02] transition-transform duration-300">
+                <span className="text-darkblue font-semibold">Image Placeholder</span>
+              </div>
             </div>
           </div>
         </div>

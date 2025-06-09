@@ -1,7 +1,7 @@
 import Image from "next/image";
 import WhoWeAre from "./who";
 import WhatWeDo from "./what";
-import Vision_Mission from "../home/vision_and_mission";
+import Vision from "./vision";
 import CoreValuesPage from "./core";
 import WhyChooseUs from "./why";
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
       </section>
       <WhoWeAre />
       <WhatWeDo />
-      <Vision_Mission />
+      <Vision/>
       <CoreValuesPage />
       <WhyChooseUs />
     </div>
