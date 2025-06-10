@@ -40,16 +40,17 @@ export default function ProductsPage() {
   const handleClick = () => {
     router.push("/products");
   };
+
   return (
-    <main className="relative min-h-screen bg-[#e2f8ff] overflow-hidden">
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <main className="flex flex-col min-h-screen bg-[#e2f8ff] overflow-hidden">
+      <div className="relative z-10 flex flex-col flex-1 px-4 mx-auto max-w-[90rem] sm:px-6 lg:px-8">
         {/* Header */}
-        <header className="pt-16 pb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-darkblue mb-4">
+        <header className="pt-10 pb-6 text-center">
+          <h2 className="mb-4 text-4xl font-bold md:text-5xl text-darkblue">
             Our Best Products
           </h2>
-          <div className="w-32 h-1 bg-golden mx-auto mb-8"></div>
-          <p className="text-darkblue max-w-4xl mx-auto text-lg md:text-xl">
+          <div className="w-32 h-1 mx-auto mb-4 bg-golden"></div>
+          <p className="max-w-4xl mx-auto text-lg text-darkblue md:text-xl">
             At DeFa Global Group of Companies LLC, we provide a wide range of
             products and services that cater to diverse industries across the
             Middle East, Asia, and beyond.
@@ -57,14 +58,13 @@ export default function ProductsPage() {
         </header>
 
         {/* Products Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12">
+        <section className="grid flex-1 grid-cols-1 gap-12 pb-4 overflow-y-auto md:grid-cols-3">
           {products.map((product, index) => (
             <div
               key={product.id}
               className="bg-white rounded-[32px] shadow-lg overflow-hidden flex flex-col"
             >
-              {/* Full-width image at the top */}
-              <div className="relative w-full aspect-[2/1]">
+              <div className="relative w-full aspect-[1.5/1]">
                 <Image
                   src={product.image}
                   alt={product.imageAlt}
@@ -74,14 +74,13 @@ export default function ProductsPage() {
                   priority={index === 0}
                 />
               </div>
-              {/* Content */}
-              <div className="p-8 flex flex-col items-start">
-                <h3 className="text-2xl font-semibold text-golden bg-clip-text mb-6">
+              <div className="flex flex-col items-start p-6">
+                <h3 className="mb-4 text-2xl font-semibold text-golden">
                   {product.title}
                 </h3>
-                <p className="text-darkblue">{product.description}</p>
+                <p className="mb-2 text-darkblue">{product.description}</p>
                 {product.items && (
-                  <ul className="text-darkblue space-y-4 list-disc pl-5">
+                  <ul className="pl-5 space-y-2 list-disc text-darkblue">
                     {product.items.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -93,7 +92,7 @@ export default function ProductsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="flex justify-center">
+        <section className="flex justify-center pt-4 pb-6">
           <Button onClick={handleClick}>View all Products</Button>
         </section>
       </div>

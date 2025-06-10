@@ -15,11 +15,11 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#10233b] text-[#eefeff] pt-16 pb-6 px-4 overflow-hidden text-xl">
       {/* Footer text content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-8">
+      <div className="relative z-10 flex flex-col gap-12 mx-auto max-w-7xl md:flex-row md:gap-8">
         {/* Left: Logo & Contact */}
-        <div className="flex-1 min-w-[250px] flex flex-col gap-6">
+        <div className="flex-1 min-w-[250px] flex flex-col gap-6 text-center md:text-left items-center md:items-start">
           {/* Logo above "DeFa Global" */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-center md:items-start">
             <Image
               src="/images/logo.png"
               alt="DeFa Global Logo"
@@ -31,9 +31,9 @@ export default function Footer() {
             </span>
           </div>
           <div className="flex flex-col gap-4 text-xl">
-            <div className="flex items-start gap-2">
-              <MapPin className="mt-1 text-white" size={24} />
-              <span>
+            <div className="flex items-start justify-center gap-2 md:justify-start">
+              <MapPin className="flex-shrink-0 mt-1 text-white" size={24} />
+              <span className="text-center md:text-left">
                 Shams Business Center, Sharjah
                 <br />
                 Media City free Zone,
@@ -41,29 +41,29 @@ export default function Footer() {
                 Al Messaned, Sharjah, UAE.
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <Mail className="text-white" size={24} />
+            <div className="flex items-center justify-center gap-2 md:justify-start">
+              <Mail className="flex-shrink-0 text-white" size={24} />
               <span>contact@defaglobal.com</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Phone className="text-white" size={24} />
+            <div className="flex items-center justify-center gap-2 md:justify-start">
+              <Phone className="flex-shrink-0 text-white" size={24} />
               <span>UAE: +971 50 323 0987</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Phone className="text-white" size={24} />
+            <div className="flex items-center justify-center gap-2 md:justify-start">
+              <Phone className="flex-shrink-0 text-white" size={24} />
               <span>Oman: +968 96 441 607</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MessageSquare className="text-white" size={24} />
+            <div className="flex items-center justify-center gap-2 md:justify-start">
+              <MessageSquare className="flex-shrink-0 text-white" size={24} />
               <span>+49 176 80763095</span>
             </div>
           </div>
         </div>
 
         {/* Center: Links */}
-        <div className="flex-[2] grid grid-cols-1 sm:grid-cols-3 gap-8 text-xl">
+        <div className="flex-[2] grid grid-cols-1 sm:grid-cols-3 gap-8 text-xl text-center md:text-left">
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-2xl font-bold text-[#e2c15a] mb-6">
               Quick Links
             </h3>
@@ -96,7 +96,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* Products */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-2xl font-bold text-[#e2c15a] mb-6">Products</h3>
             <ul className="space-y-4">
               <li>Building Materials</li>
@@ -115,7 +115,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* Services */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-2xl font-bold text-[#e2c15a] mb-6">Services</h3>
             <ul className="space-y-4">
               <li>Industrial Machinery</li>
@@ -136,8 +136,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Social links just below View All Services, aligned to the right */}
-      <div className="relative z-10 max-w-7xl mx-auto mt-2 flex justify-end gap-6 text-3xl">
+      {/* Social links - centered on mobile, right-aligned on desktop */}
+      <div className="relative z-10 flex justify-center gap-6 mx-auto mt-6 text-3xl sm:mt-0 max-w-7xl md:justify-end">
         <Link
           href="https://facebook.com"
           aria-label="Facebook"
@@ -180,7 +180,7 @@ export default function Footer() {
       </div>
 
       {/* Image overlay - on top of everything */}
-      <div className="absolute inset-0 z-20 flex justify-center items-center pointer-events-none">
+      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
         <Image
           src="/images/Objects.png"
           alt="World Map"
